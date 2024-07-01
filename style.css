@@ -1,0 +1,142 @@
+body {
+    margin: 0px;
+    background-color: #614E30 ;    
+    color: #fff;
+    font-family: sans-serif;
+}
+body a:hover {
+    opacity: 0.5;
+}
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #dec28e; 
+    width: 100%;
+    gap: 30px;
+    background-color: #443622;
+}
+.header-about {
+    margin: 0 auto 0 10px;
+}
+.header-user {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center; 
+}
+.header-tabs {
+    display: flex;
+    gap: 10px;
+}
+.main-page {
+    text-align: center;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #dec28e;
+}
+.main-carousel-usage {
+    color: #fff;
+}
+.main-menu {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+#pad {
+    background:#fff;
+    border :1px solid #aaa;
+    background-size: 100% 100%;
+    overflow: auto;
+    max-width: 2000px;
+    max-height: 2000px;
+}
+.main-canvas {
+    width: 95%;
+    overflow-x: auto;
+}
+.main-title {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 40px 0px 20px;
+}
+.imageDetails {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    width: fit-content;
+}
+.imageDetails a {
+    color: #FFF;
+}
+.imageDetails a:hover {
+    color: yellow;
+}
+.input-standart {
+    display: inline-block;
+    color: #222;
+    box-shadow: none;
+    border: 1px solid #dadada;
+    border-color: #dadada;
+    height: 47px;
+    padding: 6px 14px;
+    background: #fff;
+    background-color: #fff;
+    line-height: calc(1em + 4px);
+    border-radius: 8px;
+    position: relative;
+    font-size: 16px;
+}
+.button-standart {
+    background-color: #7E653F;
+    color: #fff;
+    border: 1px solid #433521;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button-file, .select-type {
+    border: 1px solid black;
+    background: white;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 10px;
+}
+.text-main {
+    font-size: 16px;
+    font-weight: 400;
+}
+.background-img-none {
+    background-image: none !important;
+}
+.block-title-user-img {
+    display: none;
+}
+@media all and (max-width:625px) {
+    .menu-size-img {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media all and (max-width:600px) {
+    .header {
+        flex-direction: column-reverse;
+        gap: 0px;
+    }
+    .header-tabs, .header-about {
+        margin: 10px;
+    }
+    .button-file, .select-type {
+        font-size: 12px;
+        padding: 5px;
+    }
+}

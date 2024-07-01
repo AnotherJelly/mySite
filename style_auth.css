@@ -1,0 +1,112 @@
+.auth-background, .server-background {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .5);
+    cursor: default;
+}
+.auth-block, .server-block {
+    border-radius: 10px;
+    overflow: hidden;
+    position: fixed;
+    min-width: 250px;
+    max-width: 460px;
+    width: 100%;
+    max-height: 100%;
+    padding: 20px;
+    background: white;
+}
+.auth-block__title, .server-block__title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: black;
+}
+.auth-block__icon, .server-block__icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    outline: 0;
+    opacity: .5;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    -webkit-transition: opacity .2s linear;
+    -o-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+}
+.auth-block__icon:after, .server-block__icon:after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%,-50%,0);
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.787 1L5 3.787 2.213 1 1 2.213 3.787 5 1 7.787 2.213 9 5 6.213 7.787 9 9 7.787 6.213 5 9 2.213' fill='%23999' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+}
+.auth-block__back {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpElEQVR4nO3YTYhNYRjA8d8YDY2buSQ1NYtJFpItG6UsbCkfNZrdpIidsrSQrG1tLGRpoyzZjMiMwUYToZnFLGSDBfkIo6NHnc2s3Pe6z+n86+xu9+nX073nPYe2toFsDHdwQ3LEPFaxIDFiLhDLmJSwsaYg5lvEANRtwia6TUE8bhEDULcpm3gaiF5dH/EWz3AbV3AM27JBVte4fuIRzmJzCczWGuY1Jv7huzZiHLuxHydwGXfxpYZ6j4vx+Z62BU96hFmrUUzjfg30CvsyYv52EIsxq9rUVAnMQp8wI7gWs37geGZM1aWY9Ql7JD++X689tK0reaMsvZkOVmLWyRID+omZiTnVraD4ibgkZgQfYs6ufjwtPi81BLdixvmCM/5gqjv0vYIzTgWkAqVub0Cqf8zUTQZkSfJGA/JZ8jYE5KvkbQ/IO8nbWTvep+5AQB5K3umAVIfI1F0NyAXJmwvIIYnr4Du+YZPEHY5tPJC8m034fXTiDeUv7JC4c7GNWYkbwsuAHJG4o4F4g2GJt7EYkDMSN4QX8aZmveQNB6itzX/uN8uLtrYgrZ4FAAAAAElFTkSuQmCC);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    outline: 0;
+    opacity: .5;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    -webkit-transition: opacity .2s linear;
+    -o-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+}
+.auth-block__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.auth-button {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.auth-button:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+.auth-button__in {
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABVUlEQVR4nO2awUpDMRBFs3Itrv0S/ThXagVnxLUL/0LclUzBhYqrrtLmCmL9DSXFtyykvCaZpnMhuxeYw33JzIRxLlPz+cVR9HQThX4g/KthRc8rCF2n2HI5XPQ8aR04Nq+rbUBWadPC3545JVoKnw/OZG8a6J0yYdu4DKSwYI4oE8wRZYI5okwwRzIEoYco9Pw5vTt2++wIhF7X33t6Kw2DkiBhen8K4cW6oBP++HqhkzHBNj0jtWBQ47DXgEGtW6s0DGpevyVhUDuPlIJBi4RYAgatOtddw6BlC75LGAwg8Dxr/pwzogJAdyDd/FoHd9jRy/ULS4iujxIl9FA0hh7K+NBDYxV6aXXh+X1sxlYBEoUfo6envX8OqikYiDLBHFEmmCPKBHNEmXCwjsT/oZo0yOL0DdV8Z29Kc1HNn41k43PSZTZIGu5KMIMzGlZyIkGkwbM/EbUZCEuM5e4AAAAASUVORK5CYII=);
+}
+.auth-button__out {
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABSElEQVR4nO2aTU7DMBBGpzsuwE97WdYU2aIH6QUqpMpDu0GIBVS0jRoPnMTIpVFhEVXgIWNH86Rs0zx9n9KxYwAA8GgePdogcdVon0MIA0iF5tdnUhLNFZ+BVYQ4bij1u6QiaWgibWi1EtFqtaHVSqQ31WKHVCQzSBM5TYWTc492Vjs7gVIT2S1vLzya18O9Z1CiSPWVxMth4bSm+fgKShPZ7ZPoWIJb5HudosS7s0PoCmIS+SHhzKZTCS4RcQkOkb2EMytRiVSR+v7uspHwzm4/FjcjkIL+KBKTqNG8SW8leWcf+iGCBpNEGpniq5XVGyuir9/ckiH2EeU4ZxU5oohOvhEd43+zsGr+tEpds1exZs4sPJop/Dekmw+ZQZpIZpB+Q0yjN7vxpCItaCKJaLXa0GrlXC1f8jGnEMIgHv4S3GB74jh49glLRhMBl4asgQAAAABJRU5ErkJggg==);
+}
+@media all and (max-width:520px) {
+    .auth-block, .server-block {
+        width: 90%;
+    }
+}
+@media all and (max-width:500px) {
+    .auth-button {
+        padding: 0;
+    }
+}
